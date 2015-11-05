@@ -1,0 +1,394 @@
+body
+	margin 0
+	font-family "Proxima-Nova"
+	color $text-color
+	background-color $bg-color
+
+
+/*
+ * Grid
+ * ====
+ */
+$xs = 576px
+$sm = 768px
+$md = 992px
+$lg = 1200px
+
+.grid-container
+	width 100%
+	max-width 1200px
+	margin 0 auto
+
+.grid-container *
+	box-sizing: border-box
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.row
+	list-style none
+	margin 0 -15px
+	clearfix()
+
+.col
+	float left
+	position relative
+	padding 0 15px 15px
+	img
+		max-width 100%
+		height auto
+
+grid(class = 'xs', columns = 12)
+	for colCount in (1 .. columns)
+		percentWidth = (1% * ((colCount / columns) * 100))
+		.col-{class}-{colCount}
+			width percentWidth
+
+/* Base Grid */
+grid()
+
+/* Extra Small Size */
+@media (min-width: $xs)
+	grid('sm')
+
+/* Medium Size */
+@media (min-width: $sm)
+	grid('md')
+
+/* Large Size */
+@media (min-width: $md)
+	grid('lg')
+
+/*
+ * Helpers
+ * =======
+ */
+.show-sm
+	display none
+.show-md
+	display block
+@media (max-width: $sm)
+	.show-sm
+		display block
+	.show-md
+		display none
+		color #FFFFFF
+
+// General Styles
+a
+	text-decoration none
+	display inline-block
+
+ul
+	list-style none
+	padding 0
+.pull-left
+	float left
+.pull-right
+	float right
+
+.flex-row
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	& > .wrapper
+		flex-grow 1
+		width 50%
+		
+.container
+	width 100%
+	max-width 1200px
+	margin-right auto
+	margin-left auto
+	padding-left 20px
+	padding-right 20px
+
+header
+	background-image url('../images/nav-header@2x.png')
+	background-repeat no-repeat
+	background-size cover
+	background-position center
+	padding 20px 0 140px
+	color white
+	.cta
+		text-align center
+		margin-top 91px
+		img
+			margin-bottom 20px
+		p
+			font-size 22px
+			font-weight 100
+			margin 0
+			margin-top 10px
+	.pull-right
+		display flex
+		margin 0
+		& > li
+			margin-right 35px
+		li > a
+			color white
+			font-size 12px
+			letter-spacing 1px
+			transition all 500ms ease
+			&:hover
+				padding-bottom 5px
+				border-bottom 2px solid
+		li > .active
+			padding-bottom 5px
+			border-bottom 2px solid
+section
+	border-bottom 1px solid #e0e4e9
+	text-align center
+	padding 80px 0 60px
+	.steps-container
+		margin-bottom 30px
+		.steps-row
+			display flex
+			justify-content space-around
+			margin-top 71px
+			.step
+				small
+					font-size 14px
+					color #197fc2
+					margin-top 20px
+					letter-spacing 1px
+					display block
+	.services-container
+		display flex
+		justify-content space-around
+		text-align left
+		& > .services-col
+			width 23%
+			.services-title
+				font-size 18px
+				letter-spacing 1px
+				color #197fc2
+				margin-bottom 10px
+			.services-info
+				font-size 16px
+				font-weight 100
+				color #5d6265
+				margin-top 0
+			ul > li
+				color #5d6265
+				font-size 14px 
+				font-weight 100
+	.consult-container
+		text-align left
+		margin-top 61px
+		.col-md-6
+		.col-sm-6
+		.col-xs-6
+		.col-md-4
+		.col-sm-4
+		.col-xs-4
+			float left
+		.col-md-6
+			margin-right 84px
+			width 50%
+		.col-md-4
+			.consult-wrapper
+				margin-bottom 20px
+		.consult-title
+			font-size 18px
+			letter-spacing 1px
+			color #197fc2
+			margin 0
+		.consult-info
+			font-size 16px
+			font-weight 100
+			color #5d6265
+			line-height 24px
+			margin-bottom 0
+	.section-question
+		position relative
+		h6
+			font-size 12px
+			color #a5aebc
+			margin 0 0 15px
+			letter-spacing 1px
+		.line
+			background-color #e76539
+			height 2px
+			width 96px
+			margin 0 auto
+	.section-answer
+		color #262c35
+		font-size 40px
+		letter-spacing 1px
+		margin 15px 0 5px
+		text-transform capitalize
+		font-weight 400
+	.explanation
+		color #5d6265
+		font-size 18px
+		margin 0 0 15px
+		font-weight 100
+	.schedule
+		border 1px solid #59c77f
+		font-size 14px
+		color #59c77f
+		letter-spacing 1px
+		padding 12px 30px
+		border-radius 2px
+		margin-top 20px
+		
+.orgs
+	text-align center
+	display flex
+	flex-grow 1
+	background-color #f9fbfe
+	border-bottom 1px solid #e0e4e9
+	& > div
+		width 14.2857%
+		border-right 1px solid #e0e4e9
+		padding 60px 0 50px
+
+.footer {
+	background:#293037;
+	font-family:Proxima-Nova,
+	"Proxima Nova",
+	proxima-nova,
+	"Helvetica Neue",
+	sans-serif;
+	width:100%;
+	padding-top:56px;
+	font-size:14px;
+	color:rgba(255,255,255,.5)
+}
+.footer a {
+	color:inherit;
+	text-decoration:none
+}
+.footer ul {
+	margin:0;
+	padding:0
+}
+.footer .container {
+	max-width:1280px;
+	margin-bottom:30px;
+	padding-left:15px!important;
+	padding-right:15px!important
+}
+.footer .container h4 {
+	color:#fff;
+	font-size:16px;
+	text-transform:uppercase;
+	margin-bottom:15px;
+	margin-top:0;
+	font-weight:500
+}
+.footer .container .col {
+	float:left;
+	width:100%
+}
+@media (min-width: 768px) {
+	.footer .container .col {
+		float:left;
+		width:17%
+	}
+}
+.footer .container .col ul {
+	list-style-type:none
+}
+.footer .container .col ul li {
+	margin-bottom:10px
+}
+.footer .container .col ul li .country {
+	font-weight:600
+}
+.footer .container .col ul li .country+p {
+	font-weight:100;
+	margin-top:0
+}
+.footer .container .col ul li p {
+	margin-bottom:18px
+}
+.footer .container .col ul li a:hover {
+	color:inherit;
+	text-decoration:underline
+}
+.footer .container .col .footer-logo {
+	vertical-align:middle;
+	margin-bottom:20px;
+	width:75%;
+	height:auto
+}
+.footer .container .col .number {
+	margin-bottom:0
+}
+.footer .container .col .link {
+	margin-bottom:30px;
+	color:#63a2d5;
+	display:inline-block;
+	text-decoration:none
+}
+.footer .container .col .BBB {
+	display:block
+}
+.footer .copyright {
+	background-color:#262c32;
+	width:100%;
+	font-size:14px;
+	text-align:left;
+	padding:20px 90px;
+}
+// footer
+// 	background #293037
+// 	width 100%
+// 	padding-top 56px
+// 	font-size 14px
+// 	color #7c838c
+// 	.container
+// 		display flex
+// 		max-width 1210px
+// 		margin-bottom 30px
+// 		h4
+// 			color #FFF
+// 			font-size 16px
+// 			text-transform uppercase
+// 			margin-bottom 25px
+// 			font-weight 500
+// 		.col-md-2
+// 			margin-left 70px
+// 			ul
+// 				list-style-type none
+// 				margin-left 29px
+// 				li
+// 					margin-bottom 10px
+// 					& > a
+// 						color #7c838c
+// 						transition all 500ms ease
+// 						&:hover
+// 							color white
+// 					.country
+// 						font-weight 600
+// 					p
+// 						margin-bottom 18px
+// 			.footer-logo
+// 				height 25px
+// 				vertical-align middle
+// 				margin-bottom 25px
+// 			.number
+// 				margin-bottom 13px
+// 			.link
+// 				margin-bottom 45px
+// 				color #63a2d5
+// 				display inline-block
+// 				text-decoration none
+// 			.BBB
+// 				display block
+// 	.copyright
+// 		background-color #262c32
+// 		width 100%
+// 		font-size 14px
+// 		text-align center
+// 		padding 10px 0

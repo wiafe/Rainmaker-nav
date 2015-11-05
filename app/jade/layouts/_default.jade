@@ -1,0 +1,145 @@
+doctype html
+html(lang="en")
+	head
+		title nav
+		meta(charset='UTF-8')
+		meta(content='', name='description')
+		meta(content='', name='author')
+		meta(content='3 days', name='revisit-after')
+		script(src='http://use.typekit.net/bxc7xbp.js')
+		script try{Typekit.load();}catch(e){}
+
+		// build:css /styles/main.css
+		link(href='/styles/main.css', rel='stylesheet')
+		// endbuild
+
+	body(class=page)
+		header
+			.container.clearfix
+				.pull-left
+					img(src="../images/rainmaker-logo.png")
+				ul.pull-right
+					li <a href="#" class="active" >SERVICES</a>
+					li <a href="#">PRICING</a>
+					li <a href="#">DEVELOPERS</a>
+					li <a href="#">RESOURCES</a>
+					li <a href="#">MENU</a>
+			.cta
+				.container
+					img(src="../images/header-text@2x.png")
+					p.info Your personal guide to sustainable fundraising success. 
+					p.info We design, test and promote high-impact digital experience for 
+					p.info growth-centric nonprofits and causes. 
+
+
+		block content
+
+		// Footer
+		footer
+			.footer
+				div
+					.container.clearfix
+						.col
+							a(href="/")<img src="../images/rainmaker_inverse.png" class="footer-logo">
+							p.number 1 (877) 409-0393
+							a(href="#").link support@rainmakerapp.com
+							img(src="../images/BBB@2x.png").BBB
+					
+						.col
+							h4 Product
+							ul
+								li <a href="/product#donations">Donations</a>
+								li <a href="/product#supporters">Donor Management</a>
+								li <a href="/product#accounting">Accounting</a>
+								li <a href="/product#campaigns">Fundraising Automation</a>
+								li <a href="/product#insights">Reporting & Analytics</a>
+								li <a href="/product#fundraisers">Peer-to-Peer Fundraising</a>
+								li <a href="/product#cms">Content Management</a>
+								li <a href="/product#">Volunteer Mobilization</a>
+								li <a href="/product#store">Ecommerce</a>
+								li <a href="/product#developers">Developer API</a>
+						.col
+							h4 RESOURCES
+							ul
+								li <a href="http://blog.rainmakerapp.com">Blog</a>
+								li <a href="http://blog.rainmakerapp.com/ebooks">Ebooks</a>
+								li <a href="http://blog.rainmakerapp.com/guides">Guides</a>
+								li <a href="http://blog.rainmakerapp.com/videos">Videos</a>
+						
+						.col
+							h4 SUPPORT
+							ul
+								li <a href="#" onclick="window.alert('Coming Soon')">Help Desk</a>
+								li <a href="#" onclick="window.alert('Coming Soon')">Help Articles</a>
+								li <a href="#" onclick="window.alert('Coming Soon')">Developers</a>
+						
+						.col
+							h4 CONTACT SALES
+							ul
+								li <span class="country">North America</span>
+									p 1 (877) 409-0393
+								li <span class="country">United Kingdom</span>
+									p +44 2036089359
+								li <span class="country">Australia</span>
+									p +61 289994125
+								li <span class="country">Ireland</span>
+									p +353 15262993
+				.copyright
+					p Copyright © 2015 Rainmaker Software, Inc. All Rights reserved.
+		//- footer
+		//- 	.container
+		//- 		.col-md-2
+		//- 			img(src="../images/rainmaker_inverse.png").footer-logo
+		//- 			p.number 1 (877) 409-0393
+		//- 			a(href="#").link support@rainmakerapp.com
+		//- 			img(src="../images/BBB@2x.png").BBB
+		//- 		.col-md-2
+		//- 			ul
+		//- 				h4 Product
+		//- 				li <a href="#">Donations</a>
+		//- 				li <a href="#">Donor Management</a>
+		//- 				li <a href="#">Accounting</a>
+		//- 				li <a href="#">Fundraising Automation</a>
+		//- 				li <a href="#">Reporting & Analytics</a>
+		//- 				li <a href="#">Peer-to-Peer Fundraising</a>
+		//- 				li <a href="#">Content Management</a>
+		//- 				li <a href="#">Volunteer Mobilization</a>
+		//- 				li <a href="#">Ecommerce</a>
+		//- 				li <a href="#">Developer API</a>
+		//- 		.col-md-2
+		//- 			ul
+		//- 				h4 RESOURCES
+		//- 				li <a href="#">Blog</a>
+		//- 				li <a href="#">Ebooks</a>
+		//- 				li <a href="#">Guides</a>
+		//- 				li <a href="#">Videos</a>
+		//- 		.col-md-2
+		//- 			ul
+		//- 				h4 SUPPORT
+		//- 				li <a href="#">Help Desk</a>
+		//- 				li <a href="#">Help Articles</a>
+		//- 				li <a href="#">Developers</a>
+		//- 		.col-md-2
+		//- 			ul
+		//- 				h4 CONTACT SALES
+		//- 				li
+		//- 					span.country North America
+		//- 					p 1 (877) 409-0393
+		//- 				li
+		//- 					span.country United Kingdom
+		//- 					p +44 2036089359
+		//- 				li
+		//- 					span.country Australia
+		//- 					p +61 289994125
+		//- 				li
+		//- 					span.country Ireland
+		//- 					p +353 15262993
+		//- 	.copyright
+		//- 		p Copyright © 2015 Rainmaker Software, Inc. All Rights reserved. 
+
+		// build:js /scripts/main.js
+		
+		script(src='/bower_components/jquery/dist/jquery.js')
+		
+		script(src='/scripts/main.js')
+		// endbuild
